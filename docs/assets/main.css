@@ -1,0 +1,137 @@
+/*-- For pdf export -*/
+@page {
+    size: a4 portrait;
+    margin: 25mm 10mm 25mm 10mm;
+    counter-increment: page;
+    @top-right {
+        content: counter(page);
+    }
+}
+
+.md-typeset h1{
+  font-weight: bold;
+  color: teal;
+  font-size: 18pt;
+}
+
+.md-typeset h2 {
+  font-weight: bold;
+  color: #8a43ab;
+  font-size: 16pt;
+}
+
+.md-typeset h3 {
+  font-weight: bold;
+  color: #3a636b;
+}
+
+.md-typeset pre > code {
+  font-size:11pt;
+}
+
+.superfences-tabs .highlight {
+  background: #ddd;
+}
+
+.superfences-tabs .superfences-content {
+  display: none;
+  order: 99;
+  width: 100%;
+}
+
+.superfences-tabs label {
+  width: auto;
+  margin: 0 0.5em;
+  padding: 0.25em;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.superfences-tabs input {
+  position: absolute;
+  opacity: 0;
+}
+
+.superfences-tabs input:nth-child(n+1) {
+  color: #333333;
+}
+
+.superfences-tabs input:nth-child(n+1):checked + label {
+    color: #FF5252;
+}
+
+.superfences-tabs input:nth-child(n+1):checked + label + .superfences-content {
+    display: block;
+}
+
+
+@page {
+    size: a4 portrait;
+    margin: 15mm 10mm 25mm 10mm;
+    counter-increment: page;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    white-space: pre;
+    color: grey;
+    @bottom-left {
+        content: '© 2019 CSpark Research';
+        font-size: 9pt
+    }
+    @bottom-center {
+        content: 'Page ' counter(page);
+        font-size: 10pt
+    }
+
+
+	.superfences-tabs {
+	  display: inline;
+	  position: relative;
+	  flex-wrap: nowrap;
+	}
+
+	.superfences-tabs .highlight {
+	  background: #ddd;
+	}
+
+	.superfences-tabs .superfences-content {
+	  display: inline;
+	  order: 99;
+	  width: auto;
+	}
+
+	.superfences-tabs label {
+	  width: auto;
+	  margin: 0 0.5em;
+	  padding: 0.25em;
+	  font-size: 120%;
+	  cursor: pointer;
+	}
+
+	.superfences-tabs input {
+	  position: relative;
+	  opacity: 0;
+	}
+
+	.superfences-tabs input:nth-child(n+1) {
+	  color: #333333;
+	}
+
+	.superfences-tabs input:nth-child(n+1):checked + label {
+		color: #FF5252;
+	}
+
+	.superfences-tabs input:nth-child(n+1):checked + label + .superfences-content {
+		display: inline;
+	}
+
+
+}
+
+
+.md-typeset__table {
+  width: 100%;
+}
+
+.md-typeset__table table:not([class]) {
+  display: table
+}
+
